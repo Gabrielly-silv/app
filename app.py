@@ -5,7 +5,7 @@ restaurantes = [{'nome':'restaurante XP','categoria':'Alimento','ativo':False},
                 {'nome':'CWB','categoria':'Sushi','ativo':False}] 
 
 def exibir_nome_do_programa():
- print("""Sabor Express
+ print("""Magnus Food
  """)
 def exibir_opcoes():
  print('1. Cadastrar restaurante')
@@ -64,13 +64,13 @@ def listar_restaurante():
 
 def alternar_estado_retaurante():
    exibir_subtitulo('alternando estado do retaurante')
-   nome_restaurante = input ('digite o nome do restaurante que deseja alterar o estado')
+   nome_restaurante = input ('digite o nome do restaurante que deseja alterar o estado: ')
    restaurante_encontrado = False
 
-   for retaurante in restaurantes:
-       if nome_restaurante == restaurantes['nome']:
+   for restaurante in restaurantes:
+       if nome_restaurante == restaurante['nome']:
          restaurante_encontrado = True
-         restaurantes['ativo'] = not restaurantes['nome'] 
+         restaurante['ativo'] = not restaurante['nome'] 
          mensagem = f'o restaurante {nome_restaurante} foi ativado com sucesso' if restaurantes['ativo'] else f'o restaurante {nome_restaurante} foi desativado com sucesso'
          print(mensagem)
 
@@ -87,11 +87,11 @@ def escolher_opcao():
     elif opcao_escolhida == 2:
         listar_restaurante()
     elif opcao_escolhida == 3:
-        print('Ativar restaurantes')
+        alternar_estado_retaurante()
     elif opcao_escolhida == 4:
-       finaliza_app()    
+        finaliza_app()    
     else:
-       opcao_invalida()
+        opcao_invalida()
 
  except:
     opcao_invalida()        
