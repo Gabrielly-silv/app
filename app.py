@@ -70,7 +70,7 @@ def alternar_estado_retaurante():
    for restaurante in restaurantes:
        if nome_restaurante == restaurante['nome']:
          restaurante_encontrado = True
-         restaurante['ativo'] = not restaurante['nome'] 
+         restaurante['ativo'] = not restaurante['ativo'] 
          mensagem = f'o restaurante {nome_restaurante} foi ativado com sucesso' if restaurantes['ativo'] else f'o restaurante {nome_restaurante} foi desativado com sucesso'
          print(mensagem)
 
