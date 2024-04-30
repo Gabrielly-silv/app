@@ -10,7 +10,7 @@ def exibir_nome_do_programa():
 def exibir_opcoes():
  '''Essa função é responsável por exibir opções
  '''
- 
+
  print('1. Cadastrar restaurante')
  print('2. Listar restaurante')
  print('3. Ativar restaurante')
@@ -133,7 +133,7 @@ def main():
    ''' Essa é a principal função por apresentar as opções do aplicativo
    '''
 
-   ('clear')
+   os.system('clear')
    exibir_nome_do_programa()
    exibir_opcoes()
    escolher_opcao()
